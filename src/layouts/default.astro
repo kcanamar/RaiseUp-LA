@@ -1,0 +1,74 @@
+---
+
+const navItems = [
+	{
+		path: "/",
+		label: "Home",
+	},
+	{
+		path: "/schedule",
+		label: "Schedule",
+	},
+	{
+		path: "/newsletter",
+		label: "Newsletter",
+	},
+]
+---
+
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+		<!-- Allows for RSS auto discovery -->
+		<link rel="alternate" href="rss.xml" type="application/rss+xml" title="RSS Feed for raiseup.la">
+		
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Raise Up Demo</title>
+	</head>
+	<body>
+		<header>
+			<a href="/" rel="home">
+				Raise{" "}
+				<span role="img" aria-label="upfacing arrow">🆙</span>
+			</a>
+
+			<nav>
+				{
+					navItems.map((item) => {
+						return <a href={item.path}>{item.label}</a>
+					})
+				}
+			</nav>
+		</header>
+
+		<slot />
+
+		<footer>
+			<p>
+				<a href="">created by PuffinCode</a>
+				<a href="https://astro.build"
+					>Made with Astro</a
+				>
+			</p>
+		</footer>
+	</body>
+</html>
+
+<!-- ? Apply styles and provide CSS variables to entire site -->
+<style is:global>
+
+</style>
+
+<!-- ? Local scoped styling -->
+<style>
+
+</style>

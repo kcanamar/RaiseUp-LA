@@ -1,0 +1,31 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/page.astro"
+
+const newsletters = await getCollection('newsletter')
+---
+<Layout>
+    <section class="newsletter-entries">
+        {
+            newsletters.map((letter) => {
+                return (
+                    <div class="letter">
+                        <h2>
+                            <a href={`/blog/${letter.slug}`}>{letter.data.title}</a>
+                        </h2>
+                        <time datetime={letter.data.date.toISOString()}>
+                            {letter.data.date.toDateString()}
+                        </time>
+                        <p>{letter.data.description}</p>
+                        <a href={`/blog/${letter.slug}`}>read post</a>
+                    </div>
+                )
+            })
+        }
+    </section>
+</Layout>
+
+<!-- TODO: STYLE -->
+<style>
+
+</style>

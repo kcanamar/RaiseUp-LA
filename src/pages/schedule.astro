@@ -1,0 +1,50 @@
+---
+
+// Import Astro components
+import Layout from '../layouts/page.astro'
+import Card from '../components/general/Card.astro'
+
+
+// * TODO: Bring in data from Alec's API
+// Page data
+const schedule = [
+  {
+    time: '9:00 AM',
+    title: 'Breakfast',
+    description: 'Main Hall',
+    date: "03 March 2024",
+    imgDescription: "class"
+  },
+  {
+    time: '10:00 AM', 
+    title: 'Keynote',
+    description: 'Auditorium',
+    date: "03 March 2024",
+    imgDescription: "class"
+  },
+  {
+    time: '11:00 AM',
+    title: 'Track 1',
+    description: 'Room 101',
+    date: "03 March 2024",
+    imgDescription: "class"
+  },
+]
+---
+
+<Layout >
+  <section>
+    <h1>Upcoming Class Schedule</h1>
+
+    <div class="schedule">
+      {schedule.map((item) => (
+        <Card 
+            title={item.title}
+            description={item.description}
+            date={item.date}
+            imgDescription={item.imgDescription}
+        />
+      ))}
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,18 @@
+---
+const { title, description, imgDescription, image, date } = Astro.props;
+---
+
+<article class="card">
+    {title && <h2>{title}</h2>} 
+    {image && <img src={image} alt={imgDescription} />}
+
+    <div class="card-content">
+        {date && <p>{date}</p>}
+        {description && <p>{description}</p>}
+    </div>
+</article>
+
+<!-- TODO: STYLE -->
+<style>
+
+</style>

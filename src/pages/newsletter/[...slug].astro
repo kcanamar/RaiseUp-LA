@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+
+import Layout from "../../layouts/page.astro";
+
+export async function getStaticPaths() {
+    const newsletters = await getCollection('newsletter');
+
+    return newsletters.map((letter) => {
+        return {
+            params: { slug: letter.slug },
+            props: { letter }
+        }
+    })
+}
+
+const { letter } = Astro.props;
+const { Content } = await letter.render();
+---
+
+<Layout>
+    <h1>{letter.data.title}</h1>
+    <time datetime={letter.data.date.toISOString()}>
+        {letter.data.date.toDateString()}
+    </time>
+    <Content />
+</Layout>
+
+<!-- TODO STYLE -->
+<style>
+
+</style>

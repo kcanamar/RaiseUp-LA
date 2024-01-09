@@ -11,7 +11,7 @@ const newsletters = await getCollection('newsletter')
                 return (
                     <div class="letter">
                         <h2>
-                            <a href={`/blog/${letter.slug}`}>{letter.data.title}</a>
+                            <a href={`/newsletter/${letter.slug}`}>{letter.data.title}</a>
                         </h2>
                         <time datetime={letter.data.date.toISOString()}>
                             {letter.data.date.toDateString()}

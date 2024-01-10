@@ -1,17 +1,35 @@
 ---
+interface Props {
+  testimonials: Testimonial[];
+}
+
+const { testimonials } = Astro.props;
 
 ---
 
 <section>
-    <!-- TODO: TESTIMONIAL CAROUSEL COMPONENT -->
     <article>
-        <h1>Testimonials</h1>
-        <figure>
-            <img src="/assets/images/testimonial1.svg" alt="productive outcome"/>
-            <figcaption>Testimonials about the course</figcaption>
-        </figure>
-    </article>
+        <h2>Testimonials</h2>
+        <p>Hear from our community about the impact of our programs.</p>
 
+        <div>
+          { testimonials.map((person) => {
+            return (
+              <article>
+                <p>{person.text}</p>
+
+                // TODO: consult with design team to determine if this is the best way to handle this
+                <div>
+                  {person.image && (
+                    <img src={person.image} alt={person.name} />
+                  )}
+                  <p>- {person.name}</p>
+                </div>
+              </article>
+            )
+          })}
+        </div>
+    </article>
 </section>
 
 <!-- TODO STYLE -->

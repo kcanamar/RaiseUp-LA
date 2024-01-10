@@ -6,6 +6,34 @@ import Testimonial from "../components/landing/testimonial.astro"
 import About from "../components/landing/about.astro"
 import Resources from "../components/landing/resources.astro"
 import Newsletter from "../components/landing/form-newsletter.astro";
+
+// TODO: FETCH SANITY.io DATA
+// TODO: TYPE SANITY.io DATA
+// TODO: DEFINE PROPS FOR COMPONENTS
+const testimonials: Testimonial[] = [
+  {
+    name: 'John Doe', 
+    text: 'This is a great product! I highly recommend it.'
+  },
+  {
+    name: 'Jane Smith',
+    image: 'jane.jpg',
+    text: 'The customer service here is excellent. They really took care of me.' 
+  },
+  {
+    name: 'Bob Johnson',
+    text: 'I was able to easily set up and start using the product quickly. Great user experience.'
+  },
+  {
+    name: 'Sarah Lee', 
+    image: 'sarah.png',
+    text: 'This solved a big problem for my business. So glad I found it!'
+  },
+  {
+    name: 'Mike Williams',
+    text: 'I compared several similar products and this one came out on top. Would buy again.'
+  }
+];
 ---
 
 <Layout>
@@ -17,8 +45,8 @@ import Newsletter from "../components/landing/form-newsletter.astro";
 	<!-- TODO: MARKETING SECTION -->
 	<Marketing />
 
-	<!-- TODO: TESTIMONIAL SECTION -->
-	<Testimonial />
+	<!-- TODO: TESTIMONIAL SECTION && PASS SANITY.io DATA as PROPS -->
+	<Testimonial testimonials={testimonials}/>
 
 	<!-- TODO: ABOUT SECTION -->
 	<About />

@@ -5,9 +5,9 @@ import Layout from '../layouts/page.astro'
 import Card from '../components/general/Card.astro'
 
 
-// * TODO: Bring in data from Alec's API
+// * TODO: SANITY.io data.events
 // Page data
-const schedule = [
+const events = [
   {
     time: '9:00 AM',
     title: 'Breakfast',
@@ -34,10 +34,11 @@ const schedule = [
 
 <Layout >
   <section>
-    <h1>Upcoming Class Schedule</h1>
+    <!-- TODO: SANITY.io data.heading -->
+    <h1>Upcoming Events</h1>
 
-    <div class="schedule">
-      {schedule.map((item) => (
+    <div class="events">
+      {events.map((item) => (
         <Card 
             title={item.title}
             description={item.description}

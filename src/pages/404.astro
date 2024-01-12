@@ -3,14 +3,20 @@ import Layout from "../layouts/default.astro"
 ---
 <Layout>
     <div class="not-found">
+        <!-- TODO SANITY.io data.heading -->
         <h1>Page not found (404)</h1>
-        <p>Looks like the page you requested doesn&apos;t exist.</p>
-        <p><a href="/">&larr; Back to the Homepage</a></p>
+
+        <!-- TODO SANITY.io data.body -->
+        <div>
+            <p>Looks like the page you requested doesn&apos;t exist.</p>
+            <p><a href="/">&larr; Back to the Homepage</a></p>
+        </div>
     </div>
 
 </Layout>
 
 <style>
+    /* TODO TAILWIND */
     .not-found {
         display: flex;
         margin: 0 auto;

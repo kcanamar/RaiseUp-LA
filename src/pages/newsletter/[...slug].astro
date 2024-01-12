@@ -4,6 +4,8 @@ import { getCollection } from "astro:content";
 import Layout from "../../layouts/page.astro";
 
 export async function getStaticPaths() {
+
+    // TODO SANITY.io data.newsletter for generating the slug paths
     const newsletters = await getCollection('newsletter');
 
     return newsletters.map((letter) => {

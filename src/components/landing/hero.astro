@@ -1,25 +1,62 @@
-<section>
-    <article>
-        <!-- TODO SANITY.io data.heading -->
-        <h1>RAISE UP</h1>
+<section class="text-gray-800 bg-secondary body-font">
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+        <article class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+            <!-- TODO SANITY.io data.heading -->
+            <h1 class="title-font text-yellow-500 sm:text-4xl text-3xl mb-4 font-medium">
+                RAISE UP
+            </h1>
+            <!-- TODO SANITY.io data.body -->
+            <p class="mb-8 leading-relaxed">
+                Empowering communities through accessible and inclusive education. We believe in the power of knowledge to transform lives and empower them to build a better future.
+            </p>
+            <!-- TODO: CTA Newsletter Signup Form -->
+            <div class="flex justify-center">
+                <button onclick="modalSignup.showModal()" class="inline-flex bg-blue-500 text-white border-0 py-2 px-6 focus:outline-none hover:bg-gray-800 hover:text-yellow-500 rounded text-lg">
+                    <span>Subscribe to Newsletter</span>
+                </button>
+                
+                <dialog id="modalSignup" class="rounded-xl">
+                    <div class=" bg-secondary bg-opacity-50 rounded-xl p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
+                        <!-- TODO SANITY.io data.heading -->
+                        <h2 class="text-yellow-500 text-lg font-medium title-font mb-5">
+                            Subscribe to Our Newsletter 
+                        </h2>
+                        <form action="/newsletter/confirmation" method="post">
+                            <div class="relative mb-4">
+                                <label for="name" class="leading-7 text-sm text-gray-400">
+                                    Name
+                                </label>
+                                <input type="text" id="name" name="name" class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-yellow-900 rounded border border-gray-600 focus:border-yellow-500 text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                            </div>
+                            <div class="relative mb-4">
+                                <label for="email" class="leading-7 text-sm text-gray-400">
+                                    Email
+                                </label>
+                                <input type="email" id="email" name="email" class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-yellow-900 rounded border border-gray-600 focus:border-yellow-500 text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                            </div>
+                            <button type="submit" class="text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-300 hover:text-black rounded text-lg">
+                                Submit
+                            </button>
+                            <button onclick="modalSignup.close()" class="text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-300 hover:text-black rounded text-lg" type="button">Close</button>
+                            <p class="text-xs mt-3">
+                                Disclamiere: We will not share your email address with anyone else.
+                            </p>
+                        </form>
 
-        <!-- TODO SANITY.io data.body -->
-        <p>Empowering communities through accessible and inclusive education. We believe in the power of knowledge to transform lives and build a better future.</p>
-
-        <!-- TODO: CTA Newsletter Signup Form -->
-        <a href="#newsletter-signup">Join Our Newsletter</a>
-    </article>
-    <figure aria-labelledby="figure">
-        
-        <!-- TODO SANITY.io data.image -->
-        <img src="/assets/images/about1.svg" alt="Rich giving instructions surrounding a cellphone based activity">
-
-        <!-- TODO SANITY.io data.image-caption -->
-        <figcaption id="figure">Previous Class (Class Code Name/Class Identifier)</figcaption>
-    </figure>
+                        </div>
+                </dialog>
+                <!-- TODO: CTA Contact Us Form -->
+                <!-- <a class="ml-4 inline-flex text-white bg-gray-500 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 rounded text-lg">
+                    <span class="hidden lg:block">Contact Us</span>
+                    <span class="lg:hidden">Contact</span>
+                </a> -->
+            </div>
+        </article>
+        <figure aria-labelledby="figure" class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+            <!-- TODO SANITY.io data.image -->
+            <img class="object-cover object-center rounded" src="/assets/images/about1.svg" alt="Rich giving instructions surrounding a cellphone based activity">
+            <!-- TODO SANITY.io data.image-caption -->
+            <figcaption class="mb-8 leading-relaxed" id="figure">Caption Optional</figcaption>
+        </figure>
+    </div>
 </section>
-
-<!-- TODO: STYLE -->
-<style>
-
-</style>

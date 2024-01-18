@@ -4,57 +4,49 @@ import Hero from "../components/landing/hero.astro"
 import Marketing from "../components/landing/marketing.astro"
 import Testimonial from "../components/landing/testimonial.astro"
 import About from "../components/landing/about.astro"
-import Resources from "../components/landing/resources.astro"
-import Newsletter from "../components/landing/form-newsletter.astro";
+import NewsletterForm from "../components/landing/form-newsletter.astro"
 import Mission from "../components/landing/mission.astro"
 
 // TODO: SANITY.io data.testimonials collection
 const testimonials: Testimonial[] = [
   {
     name: 'John Doe', 
-    text: 'This is a great product! I highly recommend it.'
+    image: 'https://dummyimage.com/106x106',
+    text: 'This is a great product! I highly recommend it.',
+    title: "CEO, Company Name"
   },
   {
     name: 'Jane Smith',
-    image: 'jane.jpg',
-    text: 'The customer service here is excellent. They really took care of me.' 
+    image: 'https://dummyimage.com/106x106',
+    text: 'The customer service here is excellent. They really took care of me.',
+    link: 'https://www.google.com',
+    title: "Recovering Addict, 10yrs Sober"
   },
   {
     name: 'Bob Johnson',
+    image: 'https://dummyimage.com/106x106',
     text: 'I was able to easily set up and start using the product quickly. Great user experience.'
   },
   {
     name: 'Sarah Lee', 
-    image: 'sarah.png',
+    image: 'https://dummyimage.com/106x106',
     text: 'This solved a big problem for my business. So glad I found it!'
   },
   {
     name: 'Mike Williams',
+    image: 'https://dummyimage.com/106x106',
     text: 'I compared several similar products and this one came out on top. Would buy again.'
   }
 ];
 ---
 
 <Layout>
-	<!-- TODO: HERO SECTION -->
-	<!-- <Hero /> -->
 
-  <!-- TODO: MISSION SECTION -->
-  <!-- <Mission /> -->
-
-	<!-- TODO: MARKETING SECTION -->
-	<!-- <Marketing /> -->
-
-	<!-- TODO: TESTIMONIAL SECTION && PASS SANITY.io DATA as PROPS -->
-	<!-- <Testimonial testimonials={testimonials.splice(0, 3)} /> -->
-
-	<!-- TODO: ABOUT SECTION -->
-	<!-- <About /> -->
-
-	<!-- TODO: NEWSLETTER SECTION -->
-	<!-- <Newsletter /> -->
-	
-	<!-- TODO: RESOURCES SECTION -->
-	<!-- <Resources /> -->
+	<Hero />
+  <Mission />
+	<Marketing />
+	<Testimonial testimonials={testimonials.splice(0, 3)} />
+	<About />
+	<NewsletterForm />
 
 </Layout>

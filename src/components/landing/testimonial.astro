@@ -7,26 +7,24 @@ const { testimonials } = Astro.props;
 
 ---
 
-<section>
-    <article>
-        <!-- TODO SANITY.io data.heading -->
-        <h2>Testimonials</h2>
-
-        <!-- TODO SANITY.io data.body -->
-        <p>Hear from our community about the impact of our programs.</p>
-
-        <div>
+<section class="text-gray-500 body-font">
+    <article class="container px-5 py-24 mx-auto">
+        <div class="flex flex-wrap -m-4">
           { testimonials.map((person) => {
             return (
-              <article>
-                <p>{person.text}</p>
-
-                // TODO: consult with design team to determine if this is the best way to handle this
-                <div>
+              <article class="lg:w-1/3 lg:mb-0 mb-6 p-4 w-full">
+                <div class="h-full text-center">
                   {person.image && (
-                    <img src={person.image} alt={person.name} />
+                    <img 
+                      class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-yellow-800 bg-yellow-800 bg-opacity-10" 
+                      src={person.image} 
+                      alt={person.name} 
+                    />
                   )}
-                  <p>- {person.name}</p>
+                  <p class="leading-relaxed">{person.text}</p>
+                  <span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-6 mb-4"></span>
+                  <h2 class="font-medium title-font tracking-wider text-sm">{person.name.toLocaleUpperCase()}</h2>
+                  {person?.title ? (<p class="text-gray-500">{person.title}</p>) : null}
                 </div>
               </article>
             )
@@ -34,8 +32,3 @@ const { testimonials } = Astro.props;
         </div>
     </article>
 </section>
-
-<!-- TODO STYLE -->
-<style>
-
-</style>

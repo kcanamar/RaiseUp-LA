@@ -16,14 +16,16 @@ const { testimonials } = Astro.props;
                 <div class="h-full text-center">
                   {person.image && (
                     <img 
-                      class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-yellow-800 bg-yellow-800 bg-opacity-10" 
+                      class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-yellow-500 bg-yellow-500 bg-opacity-30" 
                       src={person.image} 
                       alt={person.name} 
                     />
                   )}
                   <p class="leading-relaxed">{person.text}</p>
                   <span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-6 mb-4"></span>
-                  <h2 class="font-medium title-font tracking-wider text-sm">{person.name.toLocaleUpperCase()}</h2>
+                  <h2 class="font-medium title-font tracking-wider text-sm">
+                    {person.name.toLocaleUpperCase()}
+                  </h2>
                   {person?.title ? (<p class="text-gray-500">{person.title}</p>) : null}
                 </div>
               </article>

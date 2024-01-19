@@ -1,23 +1,24 @@
 ---
 import { getCollection } from "astro:content";
 
+
 import Layout from "../../layouts/page.astro";
 
 export async function getStaticPaths() {
 
     // TODO SANITY.io data.newsletter for generating the slug paths
-    const newsletters = await getCollection('newsletter');
+    const schedule = await getCollection('schedule');
 
-    return newsletters.map((letter) => {
+    return schedule.map((event) => {
         return {
-            params: { slug: letter.slug },
-            props: { letter }
+            params: { slug: event.slug },
+            props: { event }
         }
     })
 }
 
-const { letter } = Astro.props;
-const { Content } = await letter.render();
+const { event } = Astro.props;
+const { Content } = await event.render();
 ---
 
 <Layout>
@@ -33,21 +34,21 @@ const { Content } = await letter.render();
                 prose-img:rounded-xl
             ">
                 {
-                    letter.data?.image &&
+                    event.data?.image && 
                     <figure>
-                        <img src={letter.data?.image} alt="Cover image" width="1000" height="500" class="aspect-video object-cover" />
+                        <img src={event.data?.image} alt="Cover image" width="1000" height="500" class="aspect-video object-cover" />
                     </figure>
                 }
                 <div class="space-y-2 not-prose mb-6 lg:items-start">
                     <h1 class="text-4xl font-extrabold tracking-tight lg:text-5xl lg:leading-[3.5rem]">
-                        {letter.data?.title}
+                        {event.data?.title}
                     </h1>
                     <div class="flex lg:flex-row flex-col space-x-2 text-gray-500 dark:text-gray-400">
-                        <span>By {letter.data?.author}</span>
+                        <span>By {event.data?.author}</span>
                         <span>•</span>
-                        <span>Posted on
-                            <time datetime={letter.data.date.toISOString()}>
-                                {letter.data.date.toDateString()}
+                        <span>Posted on 
+                            <time datetime={event.data.date.toISOString()}>
+                                {event.data.date.toDateString()}
                             </time>
                         </span>
                     </div>
@@ -58,9 +59,11 @@ const { Content } = await letter.render();
                 <Content />
             </article>
         </div>
+
         <!-- Sidebar  -->
         <aside class="lg:w-1/5 p-4 text-center items-center lg:items-start lg:text-left">
             <div class="sticky top-0 space-y-6">
+
                 <!-- Related Posts -->
                 <div class="space-y-2">
                     <h3 class="text-lg font-semibold">
@@ -84,20 +87,22 @@ const { Content } = await letter.render();
                         </li>
                     </ul>
                 </div>
+
                 <!-- About the Author, -->
                 <div class="space-y-2">
                     <h3 class="text-lg font-semibold">
-                        More About {letter.data?.author}
+                        More About {event.data?.author}
                     </h3>
                     <p class="text-gray-500 dark:text-gray-400">
-                        {letter.data?.authorExcerpt || "Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
+                        {event.data?.authorExcerpt || "Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
                     </p>
                 </div>
+
                 <!-- Subcribe to Our Newsletter -->
                 <div class="space-y-2">
                     <!-- TODO SANITY.io data.heading -->
                     <h2 class="text-yellow-500 text-lg font-medium title-font mb-5">
-                        Subscribe to Our Newsletter
+                        Stay Up-todate with Events
                     </h2>
                     <!-- TODO SANITY.io data.body -->
                     <form action="/newsletter/confirmation" method="post" class="space-y-2">

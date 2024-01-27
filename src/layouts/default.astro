@@ -157,7 +157,7 @@ const iphoneResources = [
 	<body>
 
 		<!-- Change bg color to match brand color -->
-		<header class="text-gray-400 bg-primary body-font">
+		<header class="text-gray-800 bg-primary bg-yellow-300 body-font">
 			<div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
 				<nav class="flex lg:w-2/5 flex-wrap items-center text-center md:ml-auto">
 					{
@@ -166,10 +166,10 @@ const iphoneResources = [
 						})
 					}
 				</nav>
-				<a href="/" rel="home" class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-yellow-500 lg:items-center lg:justify-center mb-4 md:mb-0">
+				<a href="/" rel="home" class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
 
 					<!-- TODO COLORS -->
-					<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-black p-2 bg-yellow-500 rounded-full">
+					<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-gray-800 p-2 bg-yellow-300 rounded-full">
 						<path d="m21.706 5.292-2.999-2.999A.996.996 0 0 0 18 2H6a.996.996 0 0 0-.707.293L2.294 5.292A.994.994 0 0 0 2 6v13c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6a.994.994 0 0 0-.294-.708zM6.414 4h11.172l1 1H5.414l1-1zM14 14v3h-4v-3H7l5-5 5 5h-3z"/>
 					</svg>
 					<span class="ml-3 text-xl">Raise UP</span>
@@ -188,14 +188,14 @@ const iphoneResources = [
 		<slot />
 
 		<!-- Change bg color to match brand color -->
-		<footer class="text-gray-400 bg-primary body-font">
+		<footer class="text-gray-400 bg-primary bg-yellow-300 body-font">
 			<!-- TODO Integrate The following menu listings with SANITY.io data.siteMetadata.footerLinks -->
 			
 			<!-- Recources -->
 			<div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
 				<div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10 hidden lg:block">
-					<a href="/" rel="home" class="flex title-font font-medium items-center md:justify-start justify-center text-yellow-500">
-						<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-black p-2 bg-yellow-500 rounded-full">
+					<a href="/" rel="home" class="flex title-font font-medium items-center md:justify-start justify-center text-gray-800">
+						<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 p-2 bg-yellow-300 rounded-full">
 							<path d="m21.706 5.292-2.999-2.999A.996.996 0 0 0 18 2H6a.996.996 0 0 0-.707.293L2.294 5.292A.994.994 0 0 0 2 6v13c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6a.994.994 0 0 0-.294-.708zM6.414 4h11.172l1 1H5.414l1-1zM14 14v3h-4v-3H7l5-5 5 5h-3z"/>
 						</svg>
 						<span class="ml-3 text-xl">Raise UP</span>
@@ -204,13 +204,13 @@ const iphoneResources = [
 				</div>
 				<div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
 					<div class="lg:w-1/4 md:w-1/2 w-full px-4">
-						<h2 class="title-font font-medium text-yellow-500 border-b-2  tracking-widest text-sm mb-3">Digital Literacy</h2>
+						<h2 class="title-font font-medium text-blue-500 border-b-2 border-gray-400 tracking-widest text-sm mb-3">Digital Literacy</h2>
 						<nav class="list-none mb-10">
 							{
 								digitalLitResources.map((item) => {
 									return (
 										<li>
-											<a href={item.path}  target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-gray-800">{item.label}</a>
+											<a href={item.path}  target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-500">{item.label}</a>
 										</li>
 									)
 								})	
@@ -218,13 +218,13 @@ const iphoneResources = [
 						</nav>
 					</div>
 					<div class="lg:w-1/4 md:w-1/2 w-full px-4">
-						<h2 class="title-font font-medium text-yellow-500 border-b-2 tracking-widest text-sm mb-3">Acquiring Hardware</h2>
+						<h2 class="title-font font-medium text-blue-500 border-b-2 border-gray-400 tracking-widest text-sm mb-3">Acquiring Hardware</h2>
 						<nav class="list-none mb-10">
 							{
 								hardwardResources.map((item) => {
 									return (
 										<li>
-											<a href={item.path}  target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-gray-800">{item.label}</a>
+											<a href={item.path}  target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-500">{item.label}</a>
 										</li>
 									)
 								})	
@@ -232,13 +232,13 @@ const iphoneResources = [
 						</nav>
 					</div>
 					<div class="lg:w-1/4 md:w-1/2 w-full px-4">
-						<h2 class="title-font font-medium text-yellow-500 border-b-2  tracking-widest text-sm mb-3">Android </h2>
+						<h2 class="title-font font-medium text-blue-500 border-b-2 border-gray-400 tracking-widest text-sm mb-3">Android </h2>
 						<nav class="list-none mb-10">
 							{
 								androidResources.map((item) => {
 									return (
 										<li>
-											<a href={item.path}  target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-gray-800">{item.label}</a>
+											<a href={item.path}  target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-500">{item.label}</a>
 										</li>
 									)
 								})	
@@ -246,13 +246,13 @@ const iphoneResources = [
 						</nav>
 					</div>
 					<div class="lg:w-1/4 md:w-1/2 w-full px-4">
-						<h2 class="title-font font-medium text-yellow-500 border-b-2 tracking-widest text-sm mb-3">iPhone</h2>
+						<h2 class="title-font font-medium text-blue-500 border-gray-400 border-b-2 tracking-widest text-sm mb-3">iPhone</h2>
 						<nav class="list-none mb-10">
 							{
 								iphoneResources.map((item) => {
 									return (
 										<li>
-											<a href={item.path}  target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-gray-800">{item.label}</a>
+											<a href={item.path}  target="_blank" rel="noopener no	referrer" class="text-gray-500 hover:text-blue-500">{item.label}</a>
 										</li>
 									)
 								})	
@@ -266,9 +266,9 @@ const iphoneResources = [
 			<div class="bg-opacity-75">
 				<div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
 						<!-- Logo -->
-						<a href="/" rel="home" class="flex title-font font-medium items-center md:justify-start justify-center text-yellow-500">
+						<a href="/" rel="home" class="flex title-font font-medium items-center md:justify-start justify-center text-gray-800">
 							<!-- TODO COLORS -->
-							<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-black p-2 bg-yellow-500 rounded-full">
+							<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 p-2 bg-yellow-300 rounded-full">
 								<path d="m21.706 5.292-2.999-2.999A.996.996 0 0 0 18 2H6a.996.996 0 0 0-.707.293L2.294 5.292A.994.994 0 0 0 2 6v13c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6a.994.994 0 0 0-.294-.708zM6.414 4h11.172l1 1H5.414l1-1zM14 14v3h-4v-3H7l5-5 5 5h-3z"/>
 							</svg>
 							<span class="ml-3 text-xl">Raise UP</span>

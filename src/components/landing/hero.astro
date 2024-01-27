@@ -2,24 +2,27 @@
     <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
         <article class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <!-- TODO SANITY.io data.heading -->
-            <h1 class="title-font text-yellow-500 sm:text-4xl text-3xl mb-4 font-medium">
+            <h1 class="title-font text-black-500 sm:text-8xl text-3xl mb-4 font-medium">
                 RAISE UP
             </h1>
             <!-- TODO SANITY.io data.body -->
             <p class="mb-8 leading-relaxed">
-                Empowering communities through accessible and inclusive education. We believe in the power of knowledge to transform lives and empower them to build a better future.
+                Empowering communities through accessible and inclusive education.
             </p>
             <!-- TODO: CTA Newsletter Signup Form -->
             <div class="flex justify-center">
                 <button onclick="modalSignup.showModal()" class="inline-flex bg-blue-500 text-white border-0 py-2 px-6 focus:outline-none hover:bg-gray-800 hover:text-yellow-500 rounded text-lg">
-                    <span>Subscribe to Newsletter</span>
+                    <span>Let's Learn</span>
                 </button>
                 
                 <dialog id="modalSignup" class="rounded-xl  backdrop:backdrop-blur-sm">
                     <div class=" bg-secondary bg-opacity-50 rounded-xl p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
                         <!-- TODO SANITY.io data.heading -->
-                        <h2 class="text-yellow-500 text-lg font-medium title-font mb-5">
-                            Subscribe to Our Newsletter 
+                        <h1 class="text-yellow-500 text-3xl font-medium title-font border-b-2 py-2 border-gray-500">
+                            Stay Up To Date!
+                        </h1>
+                        <h2 class="text-blue-500 text-lg font-medium title-font mb-5">
+                            Subscribe to our Newsletter!
                         </h2>
                         <form action="/newsletter/confirmation" method="post">
                             <div class="relative mb-4">
@@ -52,10 +55,12 @@
                 </a> -->
             </div>
         </article>
+
+        <!-- Image -->
+        <!-- TODO SANITY.io data.image -->
+        <!-- TODO SANITY.io data.image-caption -->
         <figure aria-labelledby="figure" class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <!-- TODO SANITY.io data.image -->
             <img class="object-cover object-center rounded" src="/assets/images/about1.svg" alt="Rich giving instructions surrounding a cellphone based activity">
-            <!-- TODO SANITY.io data.image-caption -->
             <figcaption class="mb-8 leading-relaxed" id="figure">Caption Optional</figcaption>
         </figure>
     </div>

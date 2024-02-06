@@ -4,7 +4,6 @@ import Hero from "../components/landing/hero.astro"
 import Marketing from "../components/landing/marketing.astro"
 import Testimonial from "../components/landing/testimonial.astro"
 import About from "../components/landing/about.astro"
-import NewsletterForm from "../components/landing/form-newsletter.astro"
 import Mission from "../components/landing/mission.astro"
 
 // TODO: SANITY.io data.testimonials collection
@@ -47,6 +46,5 @@ const testimonials: Testimonial[] = [
 	<Marketing />
 	<Testimonial testimonials={testimonials.splice(0, 3)} />
 	<About />
-	<NewsletterForm />
 
 </Layout>

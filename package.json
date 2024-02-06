@@ -17,6 +17,8 @@
     "@astrojs/tailwind": "^5.1.0",
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
+    "@whyframe/astro": "^0.2.5",
+    "@whyframe/core": "^0.1.10",
     "astro": "^4.1.1",
     "markdown-it": "^14.0.0",
     "react": "^18.2.0",
